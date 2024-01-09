@@ -1,0 +1,98 @@
+@import '../tools/mixis.scss';
+
+.sport{
+  &_card {
+    &_login {
+      width: 80%;
+      margin-left: auto;
+
+      @include mq('sm', max) {
+        width: 95%;
+      }
+    }
+
+    &_access {
+      display: flex;
+      align-items: center;
+      &_link {
+        width: 27%;
+        text-align: center;
+        margin-top: 3%;
+
+        & a {
+          color: #fff;
+          background: #153f6c;
+          padding: 5.5% 22%;
+          border-radius: 0.5rem;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+
+  &_links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    & a {
+      font-size: 0.7rem;
+      color: #000;
+    }
+  }
+  &_form {
+    display: flex;
+    justify-content: space-between;
+
+    &_img {
+      width: 33%;
+    }
+
+    &_custom {
+      width: 69%;
+
+      &_field {
+        margin-bottom: 3%;
+        position: relative;
+      }
+
+      &_label {
+        width: 8%;
+        position: absolute;
+        top: 20%;
+        left: 2%;
+      }
+
+      label {
+        @include mq('xs', max) {
+          width: 17%;
+        }
+      }
+
+      &_input {
+        width: 100%;
+        height: 22px;
+        color: #424242;
+        border: none;
+        background: #e2e1e1;
+        padding-left: 5%;
+        border-radius: 0.2rem;
+        input {
+          padding: 1% !important;
+        }
+      }
+
+      &_submit {
+        &_btn {
+          background: #676d74;
+          color: #fff;
+          font-size: 0.7rem;
+          width: 100%;
+          border-radius: 0.5rem;
+          padding: 1.5%;
+        }
+      }
+    }
+  }
+}

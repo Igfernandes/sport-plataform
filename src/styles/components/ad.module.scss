@@ -1,0 +1,51 @@
+@import '../tools/mixis.scss';
+
+.sport{
+    &_anuncio{
+        height: 100%;
+        max-height: 650px;
+        &_content{
+            height: 100%;
+            max-height: 606px;
+            @include mq("lg", max){
+                max-height: 434px;
+            }
+            @include mq("md", max){
+                max-height: 428px;
+            }
+        }
+        &__a{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            text-decoration: none;
+            color: #222;
+            padding: 0% 0;
+            border: 3px solid #222;
+            @include mq("sm", max){
+                padding: 0% 0;
+            }
+        }
+        &__text{
+            margin: 5% 0;
+            @include mq("sm", max){
+                margin: 3% 0;
+            }
+            h5{
+                @include mq("xl", max){
+                    font-size: 1rem;
+                }
+            }
+        }
+        &_link{
+            height: 100%;
+        }
+        &__img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}

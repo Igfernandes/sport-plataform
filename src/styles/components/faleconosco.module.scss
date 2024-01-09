@@ -1,0 +1,155 @@
+@import '../tools/mixis.scss';
+
+.linha {
+    border-bottom: 2px solid black;
+    margin-bottom: 5%;
+}
+
+.form {
+    &_description {
+        &_p {
+            margin-bottom: 1%;
+        }
+    }
+
+    &_label {
+        width: 20%;
+        text-align: right;
+        padding: 0 2% 0 0;
+        font-size: 0.85rem;
+        align-items: center;
+        justify-content: end;
+        display: flex;
+        transition: top .2s;
+
+        @include mq("sm", max) {
+            position: absolute;
+            top: 25%;
+            left: 5%;
+            text-align: left;
+            justify-content: start;
+
+        }
+    }
+
+    &_input {
+        width: 100%;
+        border: 2px solid;
+        border-radius: 5px;
+        height: 1.3rem;
+        font-size: 0.81rem;
+        height: 2rem;
+        border: var(--bs-border-width) solid var(--bs-border-color);
+
+        &::placeholder {
+            text-transform: uppercase;
+        }
+
+        &:focus {
+            color: var(--bs-body-color);
+            background-color: var(--bs-body-bg);
+            border-color: #86b7fe;
+            outline: 0;
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+        }
+
+        @include mq("sm", max) {
+            height: 3.3rem;
+            width: 100%;
+        }
+    }
+
+    &_select {
+        text-align: left;
+        font-size: 0.81rem;
+        color: #757575;
+
+        @include mq("sm", max) {
+            text-align: left;
+            padding: 2% 3.3%;
+            font-size: 0.9rem;
+        }
+    }
+
+    &_textArea {
+        width: 100%;
+        border: 2px solid;
+        border-radius: 5px;
+        height: 20vh;
+        font-size: 0.81rem;
+        padding: 1% 2% 0 0;
+
+        &::placeholder {
+            text-transform: uppercase;
+            padding: 1% 2% 0 0;
+        }
+
+        &:focus {
+            color: var(--bs-body-color);
+            background-color: var(--bs-body-bg);
+            border-color: #86b7fe;
+            outline: 0;
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+        }
+
+        @include mq("sm", max) {
+            width: 100%;
+            padding: 2% 2.2%;
+            margin-top: 5.5%;
+        }
+    }
+
+    &_group {
+        margin: 3.5% 0;
+        align-items: center;
+
+        @include mq("sm", max) {
+            position: relative;
+            margin: 7% 0;
+
+            &:hover {
+                .form_label {
+                    top: -35%;
+                    left: 0;
+                    font-size: .7rem;
+
+                }
+
+                .form_alingTop {
+                    top: -9%;
+                    left: 0;
+                    font-size: .7rem;
+                }
+            }
+        }
+    }
+
+
+    &_alingTop {
+        width: 20%;
+        text-align: right;
+        padding: 1% 2% 0 0;
+        font-size: 0.85rem;
+        align-items: top;
+        justify-content: end;
+        display: flex;
+        transition: top .2s;
+
+        @include mq("sm", max) {
+            position: absolute;
+            top: 19%;
+            left: 4%;
+            text-align: left;
+            justify-content: start;
+        }
+    }
+
+    &_button {
+        color: #fff;
+        width: 20%;
+    }
+}
+
+.nome {
+    background: #000 !important;
+}

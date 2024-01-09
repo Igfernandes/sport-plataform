@@ -1,0 +1,376 @@
+@import '../tools/mixis.scss';
+
+.resultados {
+    padding-right: 1%;
+
+    .eventos {
+        @include mq("md", max) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &_title {
+        &_linha {
+            &_estaduais {
+                background: rgb(231, 183, 73);
+                background: linear-gradient(90deg, rgba(231, 183, 73, 1) 0%, rgba(234, 210, 74, 1) 51%, rgba(231, 183, 73, 1) 100%);
+                text-align: center;
+                padding: 1% 0%;
+                align-items: center;
+                width: 98%;
+
+                @include mq("md", max) {
+                    width: 100%;
+                }
+
+
+                &_p {
+                    color: #000;
+                    font-size: 1.2rem;
+                    margin: 0;
+                    font-weight: 700;
+                }
+            }
+
+            &_nacionais {
+                background: rgb(70, 131, 74);
+                background: linear-gradient(90deg, rgba(70, 131, 74, 1) 0%, rgba(130, 178, 92, 1) 51%, rgba(72, 129, 74, 1) 100%);
+                text-align: center;
+                padding: 1% 0%;
+                align-items: center;
+                width: 98%;
+
+                @include mq("md", max) {
+                    width: 100%;
+                }
+
+                &_p {
+                    color: #ccc;
+                    font-size: 1.2rem;
+                    margin: 0;
+                    font-weight: 700;
+                }
+            }
+        }
+
+    }
+
+    &_years {
+        &_line {
+            background-color: #153f6c;
+
+            &_list {
+                background-color: #153f6c;
+                display: flex;
+                padding: 0;
+                justify-content: space-around;
+                margin-bottom: 0;
+
+                li {
+                    color: #fff;
+                    list-style: none;
+                    padding: 1% 2%;
+                    border-right: 2px solid white;
+                    font-size: 1.2rem;
+                    width: 100%;
+                    text-align: center;
+
+                    @include mq("sm", max) {
+                        font-size: 1rem;
+                    }
+                }
+
+                li:hover {
+                    background-color: #03284f;
+                }
+            }
+        }
+    }
+
+    &_busca {
+        display: flex;
+        width: 100%;
+        background: linear-gradient(90deg, rgb(70, 131, 74) 0%, rgb(130, 178, 92) 51%, rgb(72, 129, 74) 100%);
+        padding: 0.51%;
+
+        @include mq("md", max) {
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        &_estado,
+        &_atleta {
+            display: flex;
+            width: 40%;
+            align-items: center;
+
+            @include mq("md", max) {
+                width: 100%;
+            }
+
+            @include mq("sm", max) {
+                flex-wrap: wrap;
+            }
+
+
+            &_label {
+                width: 50%;
+                color: #fff;
+                padding: 0.1% 0.15%;
+                font-size: 0.81rem;
+                text-align: center;
+
+                @include mq("md", max) {
+                    font-size: 1rem;
+                    margin: 2% 0;
+                }
+
+                @include mq("sm", max) {
+                    width: 100%;
+                }
+
+            }
+
+            &_input {
+                @include mq("sm", max) {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                input::placeholder {
+                    font-size: 0.91rem;
+                }
+
+                input {
+                    @include mq("sm", max) {
+                        width: 90%;
+                    }
+                }
+            }
+        }
+
+        &_button {
+            width: 20%;
+            padding: 0 2%;
+            align-items: center;
+            display: flex;
+
+            @include mq("md", max) {
+                width: 100%;
+                justify-content: end;
+            }
+
+            @include mq("sm", max) {
+                width: 100%;
+                justify-content: center;
+            }
+
+            button {
+                background: rgb(92, 92, 92);
+                color: #fff;
+                border-radius: 14px;
+                padding: 2% 16%;
+                font-size: 0.71rem;
+                text-transform: uppercase;
+
+                @include mq("md", max) {
+                    width: 18%;
+                    padding: 1% 0%;
+                }
+
+                @include mq("sm", max) {
+                    width: 70%;
+                    padding: 1% 0%;
+                    margin: 5% 0 3% 0;
+                }
+            }
+        }
+
+        &_evento {
+            width: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include mq("md", max) {
+                width: 25%;
+                padding: 1% 0%;
+            }
+
+            @include mq("sm", max) {
+                width: 100%;
+
+            }
+
+            &_title {
+                h1 {
+                    color: #fff;
+                    font-size: 1.2rem;
+                }
+            }
+
+            &_categoria {
+                @include mq("sm", max) {
+                    width: 100%;
+
+                }
+
+                &_label {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #fff;
+                    padding: 0 2%;
+                    margin-right: 2%;
+
+                    @include mq("sm", max) {
+                        width: 50%;
+
+                    }
+                }
+
+                &_input {
+                    input::placeholder {
+                        font-size: 0.91rem;
+                    }
+                }
+            }
+
+            &_button {
+                width: 25%;
+                display: flex;
+                justify-content: end;
+
+                @include mq("sm", max) {
+                    width: 100%;
+                    margin: 2% 0;
+                    justify-content: center;
+                }
+
+                button {
+                    color: #000;
+                    background: #fff;
+                    border: 2px solid black;
+                    border-radius: 15px;
+                    padding: 0% 12%;
+                    text-transform: uppercase;
+                    font-size: 0.8rem;
+                    font-weight: 800;
+
+                    @include mq("md", max) {
+                        height: 2rem;
+                    }
+
+                    @include mq("sm", max) {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+
+        &_table {
+            width: 100%;
+            overflow-x: scroll;
+
+            // &::-webkit-scrollbar {
+                
+            //     color: red;
+            //     width: 12px;
+            // }
+
+            @include mq("sm", max) {
+                width: 94vw;
+                overflow-x: scroll;
+                margin-bottom: 20px;
+            }
+
+            table {
+                width: 1024px;
+
+                @include mq("sm", max) {
+                    font-size: 0.9rem;
+                }
+
+                thead {
+                    tr {
+                        th {
+                            text-align: center;
+                            font-size: 0.68rem;
+                            color: #fff;
+                            background-color: #153f6c;
+                            border-right: 1px solid white;
+                            width: 50px;
+
+                            @include mq("sm", max) {
+                                font-size: 0.9rem;
+                            }
+
+                            &:nth-of-type(2) {
+                                width: 200px
+                            }
+                        }
+                    }
+                }
+
+                tbody {
+                    tr {
+                        border-top: 1px solid #2a2a2a;
+                        border-left: 1px solid #2a2a2a;
+                        border-bottom: 1px solid #2a2a2a;
+
+                        td {
+                            text-align: center;
+                            border-right: 1px solid #2a2a2a;
+                            font-size: 0.71rem;
+
+                            &:nth-of-type(2) {
+                                width: 200px
+                            }
+                        }
+
+                    }
+                }
+
+            }
+        }
+    }
+
+    &_events {
+        &_line {}
+
+        &_list {
+            flex-wrap: wrap;
+            display: flex;
+            padding: 0;
+            justify-content: space-around;
+            margin-bottom: 0;
+
+            li {
+                color: #fff;
+                list-style: none;
+                padding: 1% 1.5%;
+                border-right: 0px solid white;
+                font-size: 1rem;
+                width: 14%;
+                text-align: center;
+                align-items: center;
+                display: flex;
+                margin: 1% 0%;
+                background-color: #153f6c;
+
+                &.resultados_events_list_itemEspecial {
+                    font-size: 0.68rem;
+                }
+
+                @include mq("sm", max) {
+                    width: 24%;
+                }
+            }
+
+            li:hover {
+                background-color: #03284f;
+            }
+        }
+    }
+}

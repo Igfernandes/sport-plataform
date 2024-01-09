@@ -1,0 +1,148 @@
+@import '../tools/mixis.scss';
+
+
+.sport{
+    &_illustration {
+        display: flex;
+        flex-wrap: wrap;
+
+        &_item {
+            &:nth-of-type(1) {
+                width: 25%;
+
+                @include mq("md", max) {
+                    width: 100%;
+                }
+            }
+
+            &:nth-of-type(2) {
+                width: 75%;
+
+                @include mq("md", max) {
+                    width: 100%;
+                    margin-top: 5%;
+                }
+            } 
+
+            &:nth-of-type(3) {
+                width: 40%;
+
+                @include mq("md", max) {
+                    width: 100%;
+                }
+            }
+
+        }
+
+        &_nav {
+            &_ul {
+                list-style: none;
+                text-align: end;
+                padding: 0;
+                margin: 0;
+
+                @include mq("md", max) {
+                    text-align: center;
+                }
+
+                &_li {
+                    color: #123e6a;
+                    font-weight: 800;
+                    position: relative;
+                    padding-right: 18%;
+                    width: auto !important;
+                    height: auto !important;
+                    display: block !important;
+                    border-radius: none !important;
+                    background-color: transparent !important;
+                    opacity: .5;
+
+                    @include mq("xl", max) {
+                        font-size: .8rem;
+                    }
+
+                    @include mq("sm", max) {
+                        font-size: 1rem;
+                        padding: 0;
+                    }
+
+                    @include mq("xs", max) {
+                        font-size: .6rem;
+                    }
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        top: 0.3rem;
+                        right: 1rem;
+                        background-color: #e3df34;
+                        padding: 0.23rem;
+                        border: 2px solid #123e6a;
+                        border-radius: 2rem;
+
+                        @include mq("xl", max) {
+                            padding: 0.2rem;
+                        }
+
+                        @include mq("md", max) {
+                            right: 23% ;
+                        }
+
+                        @include mq("xs", max) {
+                            top: 0.1rem;
+                            right: 0.5rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        &_content {
+            display: flex;
+
+            @include mq("md", max) {
+                flex-wrap: wrap;
+            }
+        }
+
+        &_preview {
+            width: 50%;
+
+            @include mq("md", max) {
+                width: 100%;
+            }
+
+            &_img {
+                height: 365px;
+                background: #ffff;
+                border: 3px solid #222;
+            }
+        }
+
+        &_info {
+            background: #f3f2f3;
+            width: 50%;
+            margin: 0 1.5%;
+
+            @include mq("md", max) {
+                margin: 6% 0;
+                width: 100%;
+            }
+
+            &_title {
+                background: #123e6a;
+                padding: 2% 5%;
+                margin-bottom: 7%;
+
+                &_h5 {
+                    color: #fff;
+                    margin: 0;
+                }
+            }
+
+            &_content {
+                padding: 0 4%;
+            }
+        }
+    }
+}

@@ -1,0 +1,212 @@
+@import '../tools/mixis.scss';
+
+.sport{
+    &_licitacoes {
+        margin-bottom: 3%;
+        &_head {
+            justify-content: space-between;
+            border-bottom: 3px solid;
+            @include mq("lg", max){
+                flex-wrap: wrap;
+            }
+            &__content {
+                display: flex;
+                justify-content: space-between;
+                @include mq("lg", max){
+                    width: 100%;
+                }
+                &:first-of-type{
+                    width: 68%;
+                    @include mq("sm", max){
+                        flex-wrap: wrap;
+                        width: 100%;
+                    }
+                }
+                &:last-of-type{
+                    @include mq("lg", max){
+                        justify-content: end;
+                    }
+                }
+            }
+        }
+
+        &_title {
+            @include mq("sm", max){
+                width: 100%;
+            }
+            &_h3 {
+                font-size: 1.1rem;
+                font-weight: 700;
+                margin: 0;
+                @include mq("xl", max){
+                    font-size: .8rem;
+                }
+            }
+        }
+
+        &_opening {
+            &_span {
+                font-size: .8rem;
+                color: #07a607;
+                @include mq("xl", max){
+                    font-size: 0.6rem;
+                }
+                @include mq("sm", max){
+                    font-size: .7rem;
+                }
+            }
+        }
+        &_closure {
+            &_span {
+                font-size: .8rem;
+                color: red;
+                @include mq("xl", max){
+                    font-size: 0.6rem;
+                }
+            }
+        }
+
+        &_btn {
+            &_span {
+                font-weight: 600;
+            }
+        }
+
+        &_body {
+            padding: 2% 0%;
+        }
+
+        &_description {
+            &_title {
+                &_h4 {
+                    font-size: .8rem;
+                    margin: 0;
+                }
+            }
+
+            &_text {
+                @include mq("lg", max){
+                    margin-top: 1%;
+                }
+                &_p {
+                    font-size: .8rem;
+                    line-height: 1;
+                    @include mq("sm", max){
+                        text-align: justify;
+                    }
+                }
+            }
+        }
+
+        &_stages {
+            &_title {
+                &_h6 {
+                    font-size: .7rem;
+                    font-weight: 800;
+                }
+            }
+
+            &_box {
+                display: flex;
+                justify-content: space-between;
+                @include mq("lg", max){
+                    flex-wrap: wrap;
+                }
+                &__item {
+                   
+                    &:nth-of-type(1) {
+                        width: 84%;
+                        min-width: 735px;
+                        @include mq("xxl", max){
+                            min-width: 0;
+                        }
+                        @include mq("sm", max){
+                            min-width: 0;
+                            width: 100%;
+                        }
+                    }
+                    &:nth-of-type(2){
+                        width: 15%;
+                        text-align: center;
+                        @include mq("md", max){
+                            width: 40%;
+                            margin: 0 auto;
+                        }
+                        @include mq("sm", max){
+                            margin: 6% auto;
+                            width: 72%;
+                        }
+                        @include mq("xs", max){
+                            width: 65%;
+                        }
+                    }
+                    &_a{
+                        background: #c2c2c2;
+                        color: #fff;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-decoration: none;
+                        cursor: no-drop;
+                        @include mq("xxl", max){
+                            font-size: .7rem;
+                        }
+                        @include mq("md", max){
+                            padding: 4%;
+                        }
+                        @include mq("sm", max){
+                            font-size: 1rem;
+                        }
+                        &:hover{
+                            color: #fff;
+                        }
+                    }
+                }
+
+                &_status {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    border: 1px solid #e3e3e3;
+                    @include mq("lg", max){
+                        flex-wrap: wrap;
+                    }
+                    @include mq("md", max){
+                        width: 72%;
+                    }
+                    @include mq("sm", max){
+                        width: 100%;
+                    }
+                    &__item {
+                        background: #e3e3e3;
+                        padding: 1% 1.9%;
+                        margin: .7%;
+                        @include mq("lg", max){
+                            text-align: center;
+                        }
+                        @include mq("md", max){
+                            width: 45%;
+                            margin: 2% 0.7%;
+                        }
+                        @include mq("sm", max){
+                            width: 100%;
+                            padding: 4% 1.9%;
+                        }
+                        &_span {
+                            font-size: .7rem;
+                            @include mq("xxl", max){
+                                font-size: 0.6rem;
+                            }
+                            @include mq("lg", max){
+                                font-size: .9rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

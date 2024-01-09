@@ -1,0 +1,251 @@
+@import '../tools/mixis.scss';
+
+.sport{
+  &_school {
+    &__head {
+      background: #153f6c;
+    }
+
+    &__title {
+      text-align: center;
+      padding: 6% 0;
+
+      @include mq('sm', max) {
+        padding: 5% 0;
+      }
+
+      &_h5 {
+        color: #fff;
+        font-weight: 300;
+        margin: 0;
+
+        @include mq('xl', max) {
+          font-size: 0.9rem;
+        }
+
+        @include mq('md', max) {
+          font-size: 0.7rem;
+        }
+
+        @include mq('sm', max) {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    &__info {
+      display: flex;
+      justify-content: space-around;
+      padding: 3% 0;
+
+      &_point {
+        width: 32%;
+
+        &_img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      &_text {
+        display: flex;
+        align-items: center;
+        width: 75%;
+
+        &_p {
+          font-size: 0.8rem;
+          font-weight: 500;
+          margin: 0;
+
+          @include mq('xl', max) {
+            font-size: 0.7rem;
+          }
+
+          @include mq('md', max) {
+            font-size: 0.6rem;
+          }
+
+          @include mq('sm', max) {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+
+    &__form {
+      width: 85%;
+      padding-top: 4%;
+      margin: 0 auto;
+
+      &_label {
+        width: 12%;
+        padding: 2%;
+      }
+
+      &_select {
+        width: 80%;
+        font-size: 0.9rem;
+        appearance: none;
+        padding-left: 5%;
+        border: none;
+        border-left: 1px solid #7d72724f;
+
+        @include mq('xl', max) {
+          font-size: 0.7rem;
+        }
+
+        @include mq('md', max) {
+          font-size: 0.6rem;
+        }
+
+        @include mq('sm', max) {
+          font-size: 0.9rem;
+        }
+
+        &:focus-visible {
+          outline-color: transparent;
+        }
+      }
+
+      &_submit {
+        width: 100%;
+        color: #fff;
+        background: #153550;
+        padding: 2% 0;
+        border-radius: 0.5rem;
+
+        @include mq('md', max) {
+          font-size: 0.6rem;
+        }
+
+        @include mq('sm', max) {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    &__footer {
+      display: flex;
+      @include mq('sm', max) {
+        flex-wrap: wrap;
+      }
+      &_state,
+      &_city {
+        width: 50%;
+        margin-top: 9%;
+        @include mq('sm', max) {
+          width: 100%;
+        }
+        &_title {
+          &_h3 {
+            color: #fff;
+          }
+        }
+      }
+
+      &_state {
+        &_content {
+          overflow-y: scroll;
+          height: 62vh;
+        }
+      }
+    }
+
+    &__club {
+      display: flex;
+      margin-bottom: 2%;
+
+      @include mq('sm', max) {
+        justify-content: center;
+        margin-bottom: 5%;
+      }
+
+      &_img {
+        width: 25%;
+        padding: 0 2%;
+        border: 2px solid #cbcbcb;
+
+        @include mq('sm', max) {
+          width: 20%;
+        }
+      }
+
+      &_info {
+        width: 75%;
+        border: 2px solid #cbcbcb;
+        border-left: 0;
+
+        @include mq('sm', max) {
+          width: 70%;
+        }
+      }
+
+      &_title {
+        padding-left: 3%;
+        border-bottom: 1px solid #bdbdbd;
+
+        &_p {
+          font-size: 0.7rem;
+          margin: 0;
+
+          @include mq('md', max) {
+            font-size: 0.5rem;
+          }
+
+          @include mq('sm', max) {
+            font-size: 0.9rem;
+          }
+
+          @include mq('xs', max) {
+            font-size: 0.7rem;
+          }
+        }
+      }
+
+      &__ul {
+        list-style: none;
+        padding: 0 0 0 3%;
+        margin: 0;
+      }
+
+      &__li {
+        font-size: 0.7rem;
+
+        @include mq('xl', max) {
+          font-size: 0.6rem;
+        }
+
+        @include mq('md', max) {
+          font-size: 0.5rem;
+        }
+
+        @include mq('sm', max) {
+          font-size: 0.7rem;
+        }
+
+        @include mq('xs', max) {
+          font-size: 0.6rem;
+        }
+      }
+    }
+
+    &_fm_gp {
+      display: flex;
+      background: #fff;
+      box-shadow: 0 0 1px #6d6d6d;
+      border-radius: 0.2rem;
+      margin: 3% 0;
+    }
+
+    &_fm_slt {
+      &::after {
+        content: '';
+        background: url(/img/icon/seta.png) no-repeat center center;
+        background-size: contain;
+        display: block;
+        padding: 6px;
+      }
+    }
+  }
+}

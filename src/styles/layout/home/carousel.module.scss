@@ -1,0 +1,64 @@
+@import '../../tools/mixis.scss';
+
+.swiper {
+    &_button {
+
+        &_prev,
+        &_next {
+
+            &::after {
+                font-size: 2rem !important;
+                font-weight: 800;
+                color: #222;
+
+                @include mq("xl", max) {
+                    font-size: 1rem !important;
+                }
+            }
+        }
+
+        &_prev {
+            width: 3% !important;
+            bottom: -7% !important;
+            top: auto !important;
+            left: auto !important;
+            right: 23.2% !important;
+            background: #fff;
+            color: #000;
+
+            @include mq("xl", max) {
+                height: 30px !important;
+            }
+
+            @include mq("sm", max) {
+                width: 7% !important;
+            }
+
+            @include mq("xs", max){
+                right: 0%;
+            }
+        }
+
+        &_next {
+            width: 3% !important;
+            bottom: -7% !important;
+            top: auto !important;
+            right: 20% !important;
+            background: #fff;
+            color: #000;
+
+            @include mq("xl", max) {
+                height: 30px !important;
+            }
+
+            @include mq("sm", max) {
+                width: 7% !important;
+                right: 16% !important;
+            }
+
+            @include mq("xs", max){
+                right: -4%;
+            }
+        }
+    }
+}

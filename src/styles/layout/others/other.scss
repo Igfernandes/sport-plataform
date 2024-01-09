@@ -1,0 +1,70 @@
+.equipamentos {
+    .carousel_equipamentos {
+        .swiper-pagination-bullet-active {
+            opacity: 1 !important;
+        }
+
+        .swiper-slide {
+            opacity: 0 !important;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .swiper-slide-active {
+            opacity: 1 !important;
+            position: initial;
+        }
+    }
+}
+
+.sport{
+    &_info {
+        &_subtitle {
+            p {
+                @include mq("sm", max) {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+
+                img {
+                    margin-right: 1.5%;
+
+                    @include mq("sm", max) {
+                        width: 100% !important;
+                        height: 50vh;
+                        margin-bottom: 7%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+
+        &_list {
+            @include mq("sm", max) {
+                flex-wrap: wrap;
+            }
+
+            &_content {
+                ul {
+                    padding-left: 0!important;
+
+                    @include mq("sm", max) {
+                        padding-left: 0!important;
+                    }
+                }
+            }
+
+            &_item {
+                @include mq("sm", max) {
+                    width: 100% !important;
+                }
+            }
+
+            &_title {
+                @include mq("sm", max) {
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+}

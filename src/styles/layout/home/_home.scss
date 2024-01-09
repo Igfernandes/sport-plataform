@@ -1,0 +1,139 @@
+.sport{
+    &_development {
+        &-faixa {
+            padding: .7% 0;
+
+            @include mq("sm", max) {
+                padding: 1.7% 0;
+            }
+
+            h5 {
+                color: #fff;
+                margin: 0;
+
+                @include mq("xl", max) {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        &-social {
+            background: linear-gradient(90deg, rgba(11, 88, 156, 1) 0%, rgba(0, 149, 200, 1) 53.66%, rgba(1, 141, 194, 1) 64.57%, rgba(5, 119, 179, 1) 81.41%, rgba(11, 88, 156, 1) 100%);
+
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                list-style: none;
+                padding: 2% 0;
+                margin: 0;
+
+                @include mq("sm", max) {
+                    padding: 3% 0;
+                }
+
+                li {
+                    &:nth-of-type(1) {
+                        width: 41%;
+                        display: flex;
+                        align-items: center;
+
+                        @include mq("md", max) {
+                            width: 45%;
+                        }
+
+                        @include mq("sm", max) {
+                            width: 100%;
+                            justify-content: center;
+                        }
+
+                        div {
+                            width: 9%;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                            }
+                        }
+
+                        span {
+                            color: #fff;
+                            font-size: 1.2rem;
+                            margin-left: 2%;
+
+                            @include mq("xl", max) {
+                                font-size: 1.1rem;
+                            }
+
+                            @include mq("md", max) {
+                                font-size: .9rem;
+                            }
+
+                            @include mq("xs", max) {
+                                font-size: 0.7rem;
+                            }
+                        }
+                    }
+
+                    &:nth-of-type(2),
+                    &:nth-of-type(3) {
+                        width: 3%;
+
+                        @include mq("sm", max) {
+                            width: 8%;
+                        }
+
+                        a {
+                            display: block;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                            }
+                        }
+                    }
+
+                    &:nth-of-type(3) {
+                        margin-left: 1%;
+                    }
+
+                    &:last-of-type {
+                        width: 25%;
+                        margin-left: 1%;
+
+                        @include mq("sm", max) {
+                            width: 60%;
+                            margin: 3% 1%;
+                        }
+
+                        span {
+                            color: #fff;
+                            font-size: 1.5rem;
+                            margin-left: 2%;
+
+                            @include mq("xl", max) {
+                                font-size: 1.1rem;
+                            }
+
+                            @include mq("md", max) {
+                                font-size: .9rem;
+                            }
+                        }
+                    }
+
+                    span {
+                        @include mq("xl", max) {
+                            font-size: 1.1rem;
+                        }
+
+                        @include mq("md", max) {
+                            font-size: .9rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

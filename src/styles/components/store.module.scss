@@ -1,0 +1,83 @@
+@import '../tools/mixis.scss';
+
+.sport{
+    &_store {
+        &_content {
+            display: flex;
+            justify-content: space-evenly;
+
+            @include mq("sm", max) {
+                flex-wrap: wrap;
+            }
+        }
+
+        &_item {
+            margin: 0 2%;
+
+            @include mq("sm", max) {
+                width: 43% !important;
+            }
+        }
+
+        &_preview {
+            border: 3px solid;
+        }
+
+        &_info {
+            text-align: center;
+            margin-top: 10%;
+
+            &_name,
+            &_preco {
+                &_p {
+                    margin: 0;
+                    text-align: left;
+
+                    @include mq("md", max) {
+                        font-size: .8rem;
+                    }
+                }
+            }
+        }
+
+        &_notify {
+            background: #d3f1f1;
+            margin-top: 5%;
+
+            &_text {
+                text-align: center;
+                padding: 1%;
+
+                &_p {
+                    font-size: .9rem;
+                    margin: 0;
+                }
+            }
+        }
+
+        &_box {
+            display: flex;
+            justify-content: space-between;
+            margin: 3% 0;
+
+            &__item {
+                &:last-of-type {
+                    @include mq("md", max) {
+                        display: none;
+                    }
+                }
+            }
+
+            &_info {
+                &_ul {
+                    list-style: none;
+                    @include mq("md", max) {
+                        margin-top: 10px;
+                    }
+
+                    &_li {}
+                }
+            }
+        }
+    }
+}

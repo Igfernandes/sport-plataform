@@ -1,0 +1,72 @@
+@import '../../tools/mixis.scss';
+
+.licitacoesModal {
+    &_form {
+        &_submit {
+            text-align: end;
+            margin: 1% 0;
+
+            &_button {
+                font-size: 1.2rem;
+                background: #088a41;
+                color: #fff;
+                padding: 1% 5%;
+                border: none;
+            }
+        }
+
+        &_file {
+            margin: 3% 0;
+
+            &_label {
+                background: #aeb7c8;
+                position: relative;
+                width: 100%;
+                overflow: hidden;
+            }
+
+            &_span {
+                position: absolute;
+                top: 20%;
+                left: 8%;
+                font-size: 1.2rem;
+                @include mq("md", max){
+                    font-size: .9rem;
+                    top: 30%;
+                }
+            }
+
+            &_input {
+                opacity: 0;
+                height: 3rem;
+            }
+
+            &_icon {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 20%;
+                height: 3rem;
+                background: #c73b38;
+                padding: 2%;
+                @include mq("md", max){
+                    font-size: .9rem;
+                    padding: 5%;
+                }
+            }
+        }
+
+        &_fileAdd {
+            text-align: end;
+
+            &_span {
+                color: #fff;
+                background: #717171;
+                font-size: 3rem;
+                font-weight: 300;
+                padding: 0% 5%;
+            }
+        }
+
+    }
+}

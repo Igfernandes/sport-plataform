@@ -1,0 +1,283 @@
+@import '../../tools/mixis.scss';
+
+.sport{
+    &_slider {
+        background: url(/img/banner_atleta.png) no-repeat;
+        background-size: cover;
+        height: 105vh;
+
+        &__box {
+            display: flex;
+            height: 100%;
+
+            @include mq("sm", max) {
+                flex-wrap: wrap;
+                flex-direction: column-reverse;
+            }
+
+            &__first {
+                position: relative;
+                z-index: 0;
+                width: 40%;
+
+                @include mq("sm", max) {
+                    width: 100%;
+                    height: 47vh;
+                }
+            }
+
+            &__last {
+                width: 60%;
+                z-index: 1;
+
+                @include mq("sm", max) {
+                    width: 100%;
+                }
+            }
+        }
+
+        &__title {
+            text-align: center;
+            padding: 12% 0 4%;
+
+            @include mq("sm", max) {
+                padding: 7% 0 4%;
+            }
+
+            &_h4 {
+                color: #fff;
+            }
+        }
+
+        &__name {
+            text-align: center;
+
+            &_h1 {
+                font-size: 5rem;
+                color: #fff;
+                margin: 0;
+
+                @include mq("xl", max) {
+                    font-size: 3.5rem;
+                }
+                @include mq("sm", max) {
+                    font-size: 2.5rem;
+                }
+            }
+
+
+            &_span {
+                font-size: 2rem;
+                color: #F5991B;
+                line-height: 1;
+
+                @include mq("xl", max) {
+                    font-size: 1.4rem;
+                }
+                &__box{
+                    width: 72%;
+                    background: #fff;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        &__social {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            margin-bottom: 17%;
+
+            @include mq("sm", max) {
+                margin-top: 8%;
+            }
+
+            &_title {
+                background: #F5991B;
+                width: 50%;
+                text-align: center;
+                border-radius: 2rem;
+                padding: 3% 0;
+                margin: 0 auto;
+
+                &_h4 {
+                    color: #fff;
+                    font-weight: 300;
+                    margin: 0;
+
+                    @include mq("xl", max) {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+
+            &_icons {
+                margin-top: 5%;
+
+                &_ul {
+                    display: flex;
+                    justify-content: space-around;
+                    width: 30%;
+                    list-style: none;
+                    margin: 0 auto;
+                    padding: 0;
+                }
+
+                &_li {
+                    width: 25%;
+                }
+
+                &_a {
+                    display: block;
+                }
+            }
+        }
+
+        &__content {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        &__athletes {
+            position: absolute;
+            left: -11%;
+            width: 100%;
+            top: -20%;
+
+            @include mq("md", max) {
+                top: -13%;
+                left: -1%;
+            }
+
+            @include mq("sm", max) {
+                position: inherit;
+                left: auto;
+                top: auto;
+            }
+
+            &_img {
+                width: 75vw;
+                height: 150vh;
+                object-fit: cover;
+                clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%, 0% 41%, 0% 49%);
+                -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%, 0% 41%, 0% 49%);
+
+                @include mq("md", max) {
+                    width: 115%;
+                }
+
+                @include mq("sm", max) {
+                    width: 98%;
+                    height: 57vh;
+                }
+            }
+        }
+
+        &__club {
+            position: absolute;
+            bottom: 5%;
+            left: 2%;
+            clip-path: polygon(50% -3%, 55% 13%, 50% 0%, 100% 49%, 102% 50%, 50% 100%, 47% 100%, 0% 50%, -2% 50%);
+            height: 15rem;
+            background: #ffffff;
+            text-align: center;
+
+            @include mq("xl", max) {
+                width: 31%;
+                padding: 3% 0%;
+                left: 0%;
+            }
+
+            @include mq("md", max) {
+                left: 0%;
+            }
+
+            @include mq("sm", max) {
+                left: 9%;
+                height: 9rem;
+            }
+
+            &_img {
+                max-width: 15rem;
+                width: 16vw;
+            }
+        }
+    }
+
+    &_swiper__arrows {
+        position: relative;
+        top: -3%;
+
+        @include mq("xl", max) {
+            top: -2%;
+        }
+
+        @include mq("sm", max) {
+            top: -1%;
+        }
+
+        &_athletes_prev {
+            background: #ffff;
+            left: 24.8%;
+            width: 3%;
+
+            @include mq("xl", max) {
+                height: 2rem;
+            }
+
+            @include mq("sm", max) {
+                width: 9%;
+                left: 19%;
+            }
+
+            &::after {
+                content: 'prev';
+                font-size: 2rem;
+                color: #000;
+                font-weight: 700;
+                font-family: swiper-icons;
+                text-transform: none !important;
+                letter-spacing: 0;
+                font-variant: initial;
+                line-height: 1;
+
+                @include mq("xl", max) {
+                    font-size: 1rem !important;
+                }
+            }
+        }
+
+        &_athletes_next {
+            top: 0;
+            left: 28%;
+            right: auto;
+            background: #fff;
+            width: 3%;
+
+            @include mq("xl", max) {
+                height: 2rem;
+            }
+
+            @include mq("sm", max) {
+                width: 9%;
+            }
+
+            &::after {
+                content: 'next';
+                font-size: 2rem;
+                color: #000;
+                font-weight: 700;
+                font-family: swiper-icons;
+                text-transform: none !important;
+                letter-spacing: 0;
+                font-variant: initial;
+                line-height: 1;
+
+                @include mq("xl", max) {
+                    font-size: 1rem !important;
+                }
+            }
+        }
+    }
+}

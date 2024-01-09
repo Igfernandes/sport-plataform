@@ -1,0 +1,78 @@
+@import '../tools/mixis.scss';
+
+
+.sport{
+    &_zona{
+        width: 33.3%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &:nth-of-type(1){
+            background: #0f3d6a url(/img/box-info-blue.png) no-repeat center center;
+            text-align: center;
+            background-size: cover;
+            background-position-x: -1rem;
+            padding: 2% 2% 2% 6%;
+            @include mq("sm", max){
+                width: 100%;
+                padding: 6% 2% 9% 6%;
+            }
+        }
+        &:nth-of-type(2){
+            background: #f9b920 url(/img/box-info-yellow.png) no-repeat center center;
+            text-align: center;
+            background-size: cover;
+            background-position-x: -1rem;
+            padding: 2% 2% 2% 6%;
+            @include mq("sm", max){
+                width: 100%;
+                padding: 6% 2% 9% 6%;
+            }
+        }
+        &:nth-of-type(3){
+            background: #0d8841 url(/img/box-info-green.png) no-repeat center center;
+            text-align: center;
+            background-size: cover;
+            background-position-x: -1rem;
+            padding: 2% 2% 2% 8%;
+            @include mq("sm", max){
+                width: 100%;
+                padding: 6% 2% 9% 6%;
+            }
+        }
+        &__title{
+            &_h5{
+                color: #fff;
+                font-family: monospace;
+                font-weight: 500;
+                font-size: 1.6rem;
+                line-height: 1;
+                word-spacing: -5px;
+                @include mq("xl", max){
+                    font-size: 1.2rem;
+                }
+                @include mq("md", max){
+                    font-size: 1rem;
+                }
+                @include mq("sm", max){
+                    font-size: 1.5rem;
+                }
+            }
+
+        }
+        &__link{
+            margin-top: 8%;
+            &_a{
+                font-size: .8rem;
+                border: 1px solid #fff;
+                color: #fff;
+                text-decoration: none;
+                padding: 3.5% 18%;
+                border-radius: 0.5rem;
+                &:hover{
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

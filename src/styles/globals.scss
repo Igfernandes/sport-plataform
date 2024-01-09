@@ -1,0 +1,24 @@
+/**
+* Tools
+**/
+@import './tools/mixis.scss';
+@import './animations/animations';
+
+/**
+* Configurações
+**/
+@import './settings/settings';
+
+
+/**
+* Pages
+**/
+
+@import './layout/globals/header';
+@import './layout/home/home';
+@import './layout/modalidades/modalidades';
+@import './layout/conquistas/conquistas';
+@import './layout/globals/footer';
+@import './layout/error/404.scss';
+@import './layout/others/other.scss';
+

@@ -1,0 +1,55 @@
+@import '../tools/mixis.scss';
+
+.sport{
+    &_box {
+        &_galerias {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+
+    &_galeria {
+        margin-bottom: 2%;
+        @include mq("md",max){
+            width: 100%;
+        }
+
+        &_box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 3%;
+
+            &_title {
+                background: #0d8841;
+                color: #fff;
+                padding: 0.51% 0 0.51% 1.82%;
+
+                & h4 {
+                    margin: 0;
+                    @include mq("sm",max){
+                        margin: 5px;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+
+            &_item {
+                width: 23%;
+                @include mq("lg",max){
+                    width: 33%;
+                }
+                
+
+                &_image {}
+            }
+        }
+
+        &_button {
+            background: none;
+            width: 100%;
+            border: none;
+        }
+    }
+}

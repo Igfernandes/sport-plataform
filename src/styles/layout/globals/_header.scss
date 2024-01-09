@@ -1,0 +1,213 @@
+.sport{
+  &_logo {
+    width: 60%;
+    margin-top: 3%;
+
+    @include mq('sm', max) {
+      width: 80%;
+    }
+
+    &_img {
+      object-fit: contain;
+    }
+  }
+
+  &_navbar {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    @include mq('sm', max) {
+      display: none;
+    }
+
+    &_item {
+      position: relative;
+      width: 16.66%;
+      border-right: 2px solid white;
+      padding: 0.7% 0;
+
+      &:hover {
+        background-color: #fff;
+
+        a {
+          color: #153f6c;
+          font-weight: 600;
+
+          @include mq('md', max) {
+            font-size: 0.6rem;
+          }
+        }
+
+        ul {
+          opacity: 1;
+          z-index: 99999;
+
+          li {
+            a {
+              color: #fff;
+              border-bottom: 1px solid white;
+            }
+          }
+        }
+      }
+
+      ul {
+        position: absolute;
+        top: 94%;
+        list-style: none;
+        z-index: 9999;
+        width: 100%;
+        background: #449332;
+        padding: 0;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 0.2s ease-in-out;
+
+        li {
+          &:hover {
+            background-color: #fff;
+            border: 2px solid #449332;
+
+            a {
+              color: #449332;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &_nav {
+    position: relative;
+    max-width: 85vw;
+    margin: 0 auto;
+
+    @include mq('md', max) {
+      max-width: 100vw;
+    }
+
+    @include mq('sm', max) {
+      max-width: 100vw;
+      height: 6vh;
+      margin-top: 2%;
+    }
+
+    &::-webkit-scrollbar {
+      appearance: none;
+      height: 0;
+    }
+
+    &-content {
+      text-align: center;
+    }
+
+    &_ul {
+      &_li {
+        border-bottom: 1px solid #ffff;
+      }
+    }
+
+    .mobile-nav {
+      div {
+        width: 38px;
+        height: 2px;
+        background: #fff;
+        margin: 8px;
+        transition: 0.3s;
+      }
+
+      @include mq('sm', max) {
+        position: absolute;
+        right: 0;
+      }
+    }
+
+    &_a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.8rem;
+      padding: 5% 0;
+      cursor: pointer;
+
+      @include mq('xl', max) {
+        font-size: 0.68rem;
+      }
+
+      @include mq('md', max) {
+        font-size: 0.6rem;
+      }
+
+      @include mq('xs', max) {
+        font-size: 0.5rem;
+      }
+
+      &:hover {
+        color: #153f6c;
+      }
+    }
+
+    .active-swiper {
+      .sport_nav-content {
+        background: #fff;
+
+        a {
+          color: #153f6c;
+          font-weight: 800;
+        }
+      }
+    }
+  }
+}
+header {
+  .sport{
+    &_development {
+      &-social {
+        background: transparent !important;
+
+        @include mq('md', max) {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 24%;
+          padding-bottom: 2%;
+        }
+
+        @include mq('sm', max) {
+          width: 41%;
+          padding-bottom: 16%;
+        }
+        @include mq('xs', max) {
+          padding-bottom: 24%;
+        }
+
+        ul {
+          justify-content: end !important;
+        }
+
+        li {
+          width: 10% !important;
+          @include mq('sm', max) {
+            width: 32% !important;
+          }
+          img {
+            width: 100% !important;
+
+            @include mq('md', max) {
+              width: 90% !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.d-sm-none {
+  @include mq('sm') {
+    display: none;
+  }
+}
