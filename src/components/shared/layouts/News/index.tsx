@@ -4,7 +4,6 @@ import { useNewsContext } from '@contexts/News';
 export function News() {
   const { news, currentNews, setCurrentNews } = useNewsContext();
 
-  console.log(currentNews)
   return (
     <article>
       <div className="sport_news">

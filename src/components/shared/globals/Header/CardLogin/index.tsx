@@ -2,7 +2,6 @@ import scss from '@styles/components/cardLogin.module.scss';
 import { FormGroup } from '@components/shared/forms/FormGroup';
 import { Img } from '@components/shared/content/Img';
 import { Button } from '@components/shared/content/Button';
-import { baseUrl } from '@services/apiRoutes';
 import Link from 'next/link';
 import { BASE_URL_API } from '@constants/references';
 
@@ -12,7 +11,7 @@ export default function CardLogin() {
       <div className="sport_card">
         <div className={scss.sport_card_login}>
           <form
-            action={`${baseUrl}/load/access/login/store`}
+            action={`${process.env.NEXT_PUBLIC_API_URL}/load/access/login/store`}
             method="post"
             className={scss.sport_form}
           >

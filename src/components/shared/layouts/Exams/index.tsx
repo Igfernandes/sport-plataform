@@ -2,7 +2,6 @@ import scss from '@styles/components/exams.module.scss';
 import moment from 'moment';
 import { A } from '../../content/A';
 import { useExams } from './hooks/useExams';
-import { baseUrl } from '@services/apiRoutes';
 import { useEffect, useState } from 'react';
 import { EventShape } from '@services/Exams/types';
 import CollapseArrow from 'src/assets/icons/CollapseArrow';
@@ -64,7 +63,7 @@ export function Exams() {
                         .map((exam, key) => (
                           <li key={key}>
                             <A
-                              href={`${baseUrl}/painel/provas/inscricoes/preview/?inscricao=${exam.id}`}
+                              href={`${process.env.NEXT_PUBLIC_API_URL}/painel/provas/inscricoes/preview/?inscricao=${exam.id}`}
                               target="_blank"
                               className={scss.sport_board__list_li}
                             >

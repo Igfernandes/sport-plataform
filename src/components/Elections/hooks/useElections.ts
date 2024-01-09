@@ -22,7 +22,6 @@ export function useElections({ type }: ElectionsHookProps) {
     setElections(data ?? []);
   }, [isFetched]);
 
-  console.log(data ?? [])
   return {
     elections,
   };
