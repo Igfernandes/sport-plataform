@@ -6,7 +6,7 @@ const nextConfig = {
     return [
       {
         source:'/api/:path*' ,
-        destination: 'https://brasilarco.org.br/:path*',
+        destination: 'https://sport-plataform.vercel.app/:path*',
       },
     ]
   },
@@ -15,7 +15,7 @@ const nextConfig = {
     BASE_URL: process.env.BASE_URL,
   },
   images: {
-    domains: ['brasilarco.org.br']
+    domains: ['sport-plataform.vercel.app']
   },
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
