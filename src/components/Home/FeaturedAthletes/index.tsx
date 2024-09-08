@@ -90,7 +90,7 @@ export function FeaturedAthletes() {
                         className={scss.sport_slider__club_img}
                         src={
                           (athlete.clube ? athlete.clube.logo : athlete.federacao?.logo) ??
-                          'https://brasilarco.org.br/img/admin.jpg'
+                          'https://sport-plataform.vercel.app/img/admin.jpg'
                         }
                         alt="Brasão do Clube"
                       />

@@ -4,7 +4,7 @@ import { Header } from '@components/shared/globals/Header';
 export default function Index() {
   return (
     <>
-      <Header title="Home - BrasilArco" />
+      <Header title="Home - Sport Plataform" />
       <Home />
     </>
   );
